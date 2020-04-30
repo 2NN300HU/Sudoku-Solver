@@ -1,14 +1,3 @@
-input = [
-0,0,5,3,0,0,0,0,0,
-8,0,0,0,0,0,0,2,0,
-0,7,0,0,1,0,5,0,0,
-4,0,0,0,0,5,3,0,0,
-0,1,0,0,7,0,0,0,6,
-0,0,3,2,0,0,0,8,0,
-0,6,0,5,0,0,0,0,9,
-0,0,4,0,0,0,0,3,0,
-0,0,0,0,0,9,7,0,0]
-
 class point:
     def __init__(self, x, y):
         self.x=x
@@ -96,12 +85,23 @@ def solve(input):
             else:              
                 return output         
 
+if __name__ == "__main__":
+    input = [
+    0,0,5,3,0,0,0,0,0,
+    8,0,0,0,0,0,0,2,0,
+    0,7,0,0,1,0,5,0,0,
+    4,0,0,0,0,5,3,0,0,
+    0,1,0,0,7,0,0,0,6,
+    0,0,3,2,0,0,0,8,0,
+    0,6,0,5,0,0,0,0,9,
+    0,0,4,0,0,0,0,3,0,
+    0,0,0,0,0,9,7,0,0]
 
-aws =  solve(input)
-if aws == 0:
-    print("There is no answer")
-else:
-    for y in range(9):
-        for x in range(9):
-            print(aws[9*y+x],end=' ')
-        print("")
+    aws =  solve(input)
+    if aws == 0:
+        print("There is no answer")
+    else:
+        for y in range(9):
+            for x in range(9):
+                print(aws[9*y+x],end=' ')
+            print("")
